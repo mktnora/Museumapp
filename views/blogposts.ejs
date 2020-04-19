@@ -1,0 +1,17 @@
+<section class="blogitem">
+    <img src="<%=postsArray[i].imageURL %>" alt='Article image' class="blog-image">
+    <a class="blogitem-title" href="/blog/<%=i%>"><h1><%=postsArray[i].title %></h1></a>
+    <p class="blogitem-creation"><%=postsArray[i].author%>  <%=postsArray[i].date %></p>
+    <div class="tag-container">
+    <%
+    var arrayLength = postsArray[i].tags.length;
+    for (var j = 0; j<arrayLength; j++){
+    %>
+    <span class="span-tag"><%=postsArray[i].tags[j]%></span>
+    <%
+    }
+    %>
+    </div>
+    <p class="blogitem-exerpt"><%=postsArray[i].excerpt %></p>
+    <a class="button-blogitem" href="/blog/<%=i%>">Read more</a>
+</section>

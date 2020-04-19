@@ -1,0 +1,18 @@
+<% include header %>
+<% include nav %>
+
+<main>
+    <div class="articlelist">
+        <%
+        var numberOfPosts = postsArray.length;
+        for (var i = 0 ; i < numberOfPosts ; i++){
+        %>
+        <article>
+            <% include blogposts %>
+        </article>
+        <%
+        }
+        %>
+    </div>
+</main>
+<% include footer %>

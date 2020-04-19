@@ -1,0 +1,35 @@
+<% include header %>
+<% include nav %>
+<section class="blogitem-detail">
+    <span class="category-span"><%=post.category%></span>
+    <h1><%= post.title %></h1>
+    <h2><%= post.subtitle %></h2>
+    <p class="blogitem-creation-detail"><%= post.author %> <%= post.date %></p>
+    <div class="tag-container">
+        <%
+        var arrayLength = post.tags.length;
+        for (var j = 0; j < arrayLength; j++){
+        %>
+        <span class="span-tag"><%= post.tags[j] %></span>
+        <%
+        }
+        %>
+    </div>
+    <p class="blogitem-text"><%- post.content %></p>
+    <div class="navigation_buttons">
+        <%
+        postId = parseInt(postId);
+        lastPostId = parseInt(lastPostId);
+        %>
+        <% if (postId > 0){ %>
+        <a class="button" href="/blog/<%= postId-1 %>">< Previous post</a>
+        <% } %>
+
+        <a class="button" href="/newsfeed">Back to gallery</a>
+
+        <% if (postId < lastPostId - 1){ %>
+        <a class="button" href="/blog/<%= postId+1 %>">Next post ></a>
+        <% } %>
+    </div>
+</section>
+<% include footer %>
