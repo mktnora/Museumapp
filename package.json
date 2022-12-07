@@ -9,7 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "search-engine": "^1.1.0"
   },
   "devDependencies": {},
